@@ -1,5 +1,5 @@
 {
-    "name": "great_arch",
+    "name": "rf/great_arch",
     "type": "project",
     "license": "MIT",
     "description": "A skeleton to start a new Symfony website",

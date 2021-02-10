@@ -1,0 +1,47 @@
+{# /templates/pages/rf-social/home.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+	<h1>Hello</h1>
+	<p>Lorem ipsum</p>
+	<img src="{{ asset('logo.png') }}" alt="Logo Revue Fiduciaire">
+{% endblock %}
+
+{% block title %}RF social : l'information sur la gestion du personnel (droit du travail, d&eacute;claration sociale...){% endblock %}
+
+{% block metas %}
+	{% set meta = {
+        description : "Toute l'actualite et l'information necessaire a la gestion du personnel (declaration sociale, droit du travail...)",
+        keywords : "actualit&eacute; sociale, accidents du travail, code du travail, contrat de travail, d&eacute;claration sociale, contrats de travail, d&eacute;clarations sociales, droit social, droit du travail, salari&eacute;, gestion du personnel, protection sociale, r&eacute;glementation sociale, r&eacute;duction du temps de travail, RF Social",
+    } %}
+
+	{{ parent() }}
+{% endblock %}
+
+
+{% block metas_twitter %}
+	{% set meta_twitter = {
+        title : "RF social : l'information sur la gestion du personnel (droit du travail, d&eacute;claration sociale...)",
+        description : "Toute l'actualite et l'information necessaire a la gestion du personnel (declaration sociale, droit du travail...)",
+        image : "A d&eacute;finir",
+        image_alt : "Ceci est une jolie image RF",
+        card : "summary_large_image",
+    } %}
+
+	{{ parent() }}
+{% endblock %}
+
+
+{% block metas_og %}
+    {% set meta_og = {
+        title : "RF social : l'information sur la gestion du personnel (droit du travail, d&eacute;claration sociale...)",
+        description : "Toute l'actualite et l'information necessaire a la gestion du personnel (declaration sociale, droit du travail...)",
+        image : "A d&eacute;finir",
+        image_width : 0,
+        image_height : 0,
+    } %}
+
+	{{ parent() }}
+{% endblock %}

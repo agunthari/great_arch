@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+        <title>{% block title %}Revue Fiduciaire{% endblock %}</title>
+
+        <link rel="shortcut icon" type="image/png" href="{{ asset('shortcutRFS.png') }}" />
+        <link rel="apple-touch-icon" type="image/png" href="{{ asset('shortcutRFS.png') }}" />
+        {# <link href="https://plus.google.com/106553342328125888952" rel="publisher" /> #}
+
+        {% block metas %}
+            {% set meta = {
+                description : (meta is defined and meta.description is defined ? meta.description : "A d&eacute;finir"),
+                keywords : (meta is defined and meta.keywords is defined ? meta.keywords : "A d&eacute;finir"),
+            } %}
+
+            <meta name="description" content="{{ meta.description }}"/>
+            <meta name="keywords" content="{{ meta.keywords }}" />
+            <meta name="author" content="Revue Fiduciaire" />
+        {% endblock %}
+
+        {% block metas_twitter %}
+            {% set meta_twitter = {
+                title : (meta_twitter is defined and meta_twitter.title is defined ? meta_twitter.title : "A d&eacute;finir"),
+                description : (meta_twitter is defined and meta_twitter.description is defined ? meta_twitter.description : "A d&eacute;finir"),
+                image : (meta_twitter is defined and meta_twitter.image is defined ? meta_twitter.image : "A d&eacute;finir"),
+                image_alt : (meta_twitter is defined and meta_twitter.image_alt is defined ? meta_twitter.image_alt : "A d&eacute;finir"),
+                card : (meta_twitter is defined and meta_twitter.card is defined ? meta_twitter.card : "A d&eacute;finir"),
+            } %}
+
+            <meta name="twitter:site" content="@groupeRF"/>
+            <meta name="twitter:title" content="{{ meta_twitter.title }}"/>
+            <meta name="twitter:description" content="{{ meta_twitter.description }}">
+            <meta name="twitter:image" content="{{ meta_twitter.image }}"/>
+            <meta name="twitter:image:alt" content="{{ meta_twitter.image_alt }}"/>
+            <meta name="twitter:card" content="{{ meta_twitter.card }}"/>
+        {% endblock %}
+
+        {% block metas_og %}
+            {% set meta_og = {
+                title : (meta_og is defined and meta_og.title is defined ? meta_og.title : "A d&eacute;finir"),
+                description : (meta_og is defined and meta_og.description is defined ? meta_og.description : "A d&eacute;finir"),
+                url : (meta_og is defined and meta_og.url is defined ? meta_og.url : absolute_url(app.request.pathInfo)),
+                image : (meta_og is defined and meta_og.image is defined ? meta_og.image : "A d&eacute;finir"),
+                image_width : (meta_og is defined and meta_og.image_width is defined ? meta_og.image_width : "A d&eacute;finir"),
+                image_height : (meta_og is defined and meta_og.image_height is defined ? meta_og.image_height : "A d&eacute;finir"),
+                image_type : (meta_og is defined and meta_og.image_type is defined ? meta_og.image_type : "A d&eacute;finir"),
+            } %}
+
+            <meta property="og:title" content="{{ meta_og.title }}"/>
+            <meta name="og:description" content="{{ meta_og.description }}">
+            <meta property="og:url" content="{{ meta_og.url }}"/>
+            <meta property="og:image" content="{{ meta_og.image }}"/>
+            <meta property="og:image:width" content="{{ meta_og.image_width }}"/>
+            <meta property="og:image:height" content="{{ meta_og.image_height }}"/>
+            <meta property="og:image:type" content="{{ meta_og.image_type }}">
+            <meta property="og:type" content="article"/>
+            <meta property="og:site_name" content="Revue Fiduciaire"/>
+            <meta name="og:locale" content="fr_FR">
+        {% endblock %}
+
+        
+
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

@@ -15,11 +15,13 @@
             {% set meta = {
                 description : (meta is defined and meta.description is defined ? meta.description : "A d&eacute;finir"),
                 keywords : (meta is defined and meta.keywords is defined ? meta.keywords : "A d&eacute;finir"),
+                robots : (meta is defined and meta.robots is defined ? meta.robots : "index,follow"),
             } %}
 
             <meta name="description" content="{{ meta.description }}"/>
             <meta name="keywords" content="{{ meta.keywords }}" />
             <meta name="author" content="Revue Fiduciaire" />
+            <meta name="robots" content="{{ meta.robots }}" />
         {% endblock %}
 
         {% block metas_twitter %}
@@ -62,12 +64,26 @@
             <meta name="og:locale" content="fr_FR">
         {% endblock %}
 
+        {% block fonts %}
+            <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800' rel='stylesheet' type='text/css'>
+        {% endblock %}
         
 
         {% block stylesheets %}
+            {# Bootstrap #}
+            <link type="text/css" media="screen" href="{{ asset('css/contrib/bootstrap.min.css') }}" rel="stylesheet"/>
+            <link type="text/css" media="screen" href="{{ asset('css/contrib/jquery-ui.min.css') }}" rel="stylesheet"/>
+
+            <link type="text/css" media="screen" href="{{ asset('css/styles.css') }}" rel="stylesheet"/>
         {% endblock %}
 
         {% block javascripts %}
+            <script src="{{ asset('js/contrib/jquery.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('js/contrib/jquery-ui.min.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('js/contrib/MathJax.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('js/contrib/bxslider.js') }}" type="text/javascript"></script>
+
+            <script src="{{ asset('js/scripts.js') }}" type="text/javascript"></script>
         {% endblock %}
     </head>
     <body>

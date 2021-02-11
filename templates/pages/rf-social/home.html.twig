@@ -4,9 +4,271 @@
 
 
 {% block body %}
-	<h1>Hello</h1>
-	<p>Lorem ipsum</p>
-	<img src="{{ asset('logo.png') }}" alt="Logo Revue Fiduciaire">
+	{{ include('blocs/bloc_rs.html.twig') }}
+	
+
+	
+
+
+	<!-- fin reseaux sociaux -->  
+	<div class="mega">
+		<div id="megabanner" class="decal_pour_zoom">
+			<iframe src="/mega_bannieres.php" scrolling="no" height="90" width="728" frameborder="0"></iframe>
+		</div>
+	</div>
+		
+	{% if app.request.server.get('APP_ENV') == 'dev' %}
+      <div style="position:fixed;top:150px;left:0;z-index:10000000;background:rgba(0,0,0,0.5);color:#ffffff;padding:5px;">
+        <div class="visible-lg hidden-md hidden-sm hidden-xs testIsLg">LG</div>
+        <div class="hidden-lg visible-md hidden-sm hidden-xstestIsMd">MD</div>
+        <div class="hidden-lg hidden-md visible-sm hidden-xs testIsSm">SM</div>
+        <div class="hidden-lg hidden-md hidden-sm visible-xs testIsXs">XS</div>
+      </div>
+    {% endif %}
+<div class="menu_fixed">
+	<div class="navbar navbar-default navbar-relative-top">
+		<div class="container text-left " >
+					<a href="/"><img src="/images/newhome/logo.png" alt="RFSocial" class="logoSite"></a><br>
+											<div class="contain_badge">
+												</div>
+							</div>
+		<div class="header-right">
+<!-- Espace Compte connectï¿½ -->
+				
+		<form action="/identification/" method="post" >
+			<input type="hidden" name="redirect_url" value="/" />
+		  	<ul id="menuConnecte">
+				<li>
+					<div class="monCompte">
+						<a href="#" class="lien_connec">
+							<i class="icon icon-account-circle-1"></i>
+							<span class="txt_users">Se connecter</span>
+						</a> 
+					</div>
+
+					<ul class="sousMenu connect_user">
+						<li class="no-hover">							
+							<input name="login" id="identifiant" class="site_header_login"   type="text" autocomplete="false" onKeyPress="if(event.keyCode == 13) submit();" value="" placeholder="identifiant" />
+						</li>
+						<li class="no-hover">							
+							<input name="password" id="passe" class="site_header_pass" maxlength="10"  type="password" autocomplete="false" onKeyPress="if(event.keyCode == 13) submit();" value="" placeholder="mot de passe" />
+						</li>
+						
+						<li class="no-hover">
+							<button style="width:94%" onclick="submit();" class="btn btn-success" id="bouton-connexion" type="button">ok</button>
+						</li>
+						<li class="divider"></li>
+						<li><a href="http://moncompte.grouperf.com/mot_de_passe_oublie.html" target="_blank" class="site_header_code">Mot de passe oubli&eacute; ?</a></li>
+					</ul>
+				</li>
+			</ul>
+		</form>
+        
+		<span class="lineV"> | </span>
+		<a href="https://boutique.grouperf.com/produit/rf-social?code_campagne=0000PT30SW00001&utm_source=btn-site-presse&utm_medium=btn-header&utm_campaign=site-presse-RF-Social" target="_blank"><button type="button" class="btn btn-primary" style="background-color:#E6184A; color:#FFFFFF;">S&apos;abonner</button></a>
+        <!-- Fin Formulaire de connexion --> 
+		   		
+			
+		</div>
+	</div>
+	<div class="navbar navbar-default navbar-relative-top greenRF">
+	
+		<div class="container">
+			<div class="navbar-collapse collapse">
+				<div class="row no-padding no-margin">
+					<div class="col-lg-8 col-md-9 col-sm-9 col-xs-12 text-left no-padding">
+						<ul class="nav navbar-nav">
+
+																								
+						<li class="dropdown">
+							<a id="actu" role="button" data-toggle="dropdown" data-hover="dropdown" data-target="#">
+								Actualité							</a>
+														<ul class="dropdown-menu openHover  menu-rf">
+																
+																<li class="title_ss_menu">
+									<a href="/actu/" class="title_ss_menu no_lien">
+										Le fil quotidien									</a>
+								</li>
+																																
+																															</ul>
+														
+						</li>
+																														<li><span class="sepMenu">|</span></li>
+												
+						<li class="dropdown">
+							<a id="ra" role="button" data-toggle="dropdown" data-hover="dropdown" data-target="#">
+								Revues d'actualité							</a>
+														<ul class="dropdown-menu openHover  menu-rf">
+																
+																<li class="title_ss_menu">
+									<span class="title_ss_menu">
+										4 dernières revues									</span>
+								</li>
+																																		<li>
+										<a href="/revue/0215/ra">
+											&nbsp;Revue n&deg;215 du 02-2021										</a>
+									</li>
+																		<li>
+										<a href="/revue/0214/ra">
+											&nbsp;Revue n&deg;214 du 01-2021										</a>
+									</li>
+																		<li>
+										<a href="/revue/0213/ra">
+											&nbsp;Revue n&deg;213 du 12-2020										</a>
+									</li>
+																		<li>
+										<a href="/revue/0212/ra">
+											&nbsp;Revue n&deg;212 du 11-2020										</a>
+									</li>
+																																	
+																<li class="title_ss_menu">
+									<a href="/revue/navigation.php" class="title_ss_menu no_lien">
+										Archives revues									</a>
+								</li>
+																																
+																<li class="title_ss_menu">
+									<a href="/plussurlenet/" class="title_ss_menu no_lien">
+										Plus sur le net									</a>
+								</li>
+																															</ul>
+														
+						</li>
+																														<li><span class="sepMenu">|</span></li>
+												
+						<li class="dropdown">
+							<a id="cj" role="button" data-toggle="dropdown" data-hover="dropdown" data-target="#">
+								Cahiers Juridiques							</a>
+														<ul class="dropdown-menu openHover  menu-rf">
+																
+																<li class="title_ss_menu">
+									<span class="title_ss_menu">
+										5 derniers cahiers									</span>
+								</li>
+																																		<li>
+										<a href="/cahier/0215/cj">
+											Cotisations, prestations et chiffres utiles<br>Cahier n&deg; 215 du 02-2021										</a>
+									</li>
+																		<li>
+										<a href="/cahier/0214/cj">
+											Départ et mise à la retraite<br>Cahier n&deg; 214 du 01-2021										</a>
+									</li>
+																		<li>
+										<a href="/cahier/0213/cj">
+											Ruptures conventionnelles et autres départs négociés<br>Cahier n&deg; 213 du 12-2020										</a>
+									</li>
+																		<li>
+										<a href="/cahier/0212/cj">
+											Compte personnel d'activité
+CPF, C2P, compte d'engagement citoyen<br>Cahier n&deg; 212 du 11-2020										</a>
+									</li>
+																		<li>
+										<a href="/cahier/0211/cj">
+											Plans d'épargne salariale
+PEE, PEI, PERCO, PERE-CO<br>Cahier n&deg; 211 du 10-2020										</a>
+									</li>
+																																	
+																<li class="title_ss_menu">
+									<a href="/revue/navigation.php?type=monothematique" class="title_ss_menu no_lien">
+										Archives									</a>
+								</li>
+																																
+																<li class="title_ss_menu">
+									<a href="https://pdfzdispatcher.grouperf.com/check?file=8b201dd6-579f-4ecf-89fe-cd7d83a2845d.d.html" class="title_ss_menu no_lien">
+										Programmation									</a>
+								</li>
+																															</ul>
+														
+						</li>
+																														<li><span class="sepMenu">|</span></li>
+												
+						<li class="dropdown">
+							<a id="dictionnaires" role="button" data-toggle="dropdown" data-hover="dropdown" data-target="#">
+								Dictionnaires							</a>
+														<ul class="dropdown-menu openHover  menu-rf">
+																
+																<li class="title_ss_menu">
+									<a href="/dictionnaire/social/navigation.php?lettre=a" class="title_ss_menu no_lien">
+										Dictionnaire Social									</a>
+								</li>
+																																
+																<li class="title_ss_menu">
+									<a href="http://revuefiduciaire.grouperf.com/dictionnaire/fiscal/navigation.php?lettre=a" class="title_ss_menu no_lien">
+										Dictionnaire Fiscal									</a>
+								</li>
+																																
+																<li class="title_ss_menu">
+									<a href="http://rfcomptable.grouperf.com/dictionnaire/comptable_financier/navigation.php?lettre=a" class="title_ss_menu no_lien">
+										Dictionnaire Comptable et financier									</a>
+								</li>
+																																
+																<li class="title_ss_menu">
+									<a href="http://rfpaye.grouperf.com/dictionnaire/paye/navigation.php?lettre=a" class="title_ss_menu no_lien">
+										Dictionnaire Paye									</a>
+								</li>
+																															</ul>
+														
+						</li>
+																														<li><span class="sepMenu">|</span></li>
+												
+						<li class="dropdown">
+							<a id="outils" role="button" data-toggle="dropdown" data-hover="dropdown" data-target="#">
+								Outils							</a>
+														<ul class="dropdown-menu openHover  menu-rf">
+																
+																<li class="title_ss_menu">
+									<a href="https://fds.grouperf.com/" class="title_ss_menu no_lien">
+										Formulaire de droit social									</a>
+								</li>
+																																
+																<li class="title_ss_menu">
+									<span class="title_ss_menu">
+										Newsletter									</span>
+								</li>
+																																		<li>
+										<a href="/compte/index.php?page=newsletter">
+											Inscription										</a>
+									</li>
+																		<li>
+										<a href="/nl/">
+											Archives newsletters										</a>
+									</li>
+																																	
+																<li class="title_ss_menu">
+									<a href="/chiffres/" class="title_ss_menu no_lien">
+										Chiffres et indices									</a>
+								</li>
+																																
+																<li class="title_ss_menu">
+									<a href="/echeancier/" class="title_ss_menu no_lien">
+										&Eacute;chéancier									</a>
+								</li>
+																																
+																<li class="title_ss_menu">
+									<a href="/sitesutiles/" class="title_ss_menu no_lien">
+										Sites utiles									</a>
+								</li>
+																															</ul>
+														
+						</li>
+																		
+					</ul>
+					</div>
+					<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 text-left no-padding">
+						<ul class="nav navbar-nav navbar-left search_bar">
+						<li>
+							<form id="searchfrm" name="searchForm" autocomplete="on" action="/recherche/index.php?mode=search" method="post">
+																	<input type="hidden" name="fsite" value="rfsoci" tata="tata">
+																<input type="text" name="q" id="autocomplete" class="form-control global-input-rf" autocomplete="off" autofocus="">
+								<button type="submit" class="btSearch"><i class="icon icon-search"></i></button>
+							</form>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}
 
 {% block title %}RF social : l'information sur la gestion du personnel (droit du travail, d&eacute;claration sociale...){% endblock %}

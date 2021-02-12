@@ -1,3 +1,4 @@
-# great_arch
+# Projet Grande Arche (great_arch)
 
-hello
+## Prerequis
+- [WAMP](https://sourceforge.net/projects/wampserver/files/) ou [XAMPP](https://www.apachefriends.org/fr/index.html)

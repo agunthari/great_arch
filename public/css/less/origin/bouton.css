@@ -1,0 +1,69 @@
+@charset "iso-8859-1";
+/* CSS Document */
+
+
+.LnkWcbForm-trigger2 { border: none; z-index:100;}
+div#btn1 button.LnkWcbForm-trigger { height:60px;}
+div#btn1 button.LnkWcbForm-trigger span{ bottom:0px;}
+div#btn1 button.LnkWcbForm-trigger p{ margin-top: -15px;}
+
+
+div#btn3 button.LnkWcbForm-trigger1 {
+    height: 60px;
+}
+.LnkWcbForm-trigger1 {
+    background: url("https://www.grouperf.com/linkeo/wse/images/picto_allo.png") no-repeat scroll 10px 8px #EBEBEB;
+    border: 0 none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    height: 50px;
+    line-height: 14px;
+    margin: 0;
+    padding: 0 0 0 42px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out 0s;
+    width: 170px;
+}
+div#btn3 button.LnkWcbForm-trigger1 span {
+    bottom: 0;
+}
+.LnkWcbForm-trigger1 span {
+    background-color: #E60000;
+    background-image: -moz-linear-gradient(center top , rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
+    border-radius: 5px;
+    bottom: -10px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    height: 12px;
+    padding: 4px 0;
+    position: absolute;
+    right: -8px;
+    text-transform: uppercase;
+    width: 100px;
+}
+
+div#btn3 button.LnkWcbForm-trigger1 p {
+    margin-top: -15px;
+}
+.LnkWcbForm-trigger1 p {
+    margin: -8px 0 0;
+    text-align: left;
+}
+.LnkWcbForm-trigger1 {
+    color: #000000;
+    cursor: pointer;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    line-height: 14px;
+}
+.LnkWcbForm-trigger1:hover span {
+    background: none repeat scroll 0 0 #E60000;
+}

@@ -1,0 +1,263 @@
+@charset "iso-8859-1";
+/* CSS Document */
+
+/* bandeaux pages */
+div.bandeauOutils{ background-image:none;}
+div.bandeauAbonne {background-image:none;}
+div.bandeauCatalogue { background-image:none;}
+div.bandeauGuideNC{background-image:none;}
+div.bandeauGuideRP{background-image:none;}
+div.bandeauSupplement{background-image:none;}
+div.bandeauTheme {background-image:none;}
+div.bandeauDico {background-image:none;}
+div.bandeauRevue {background-image:none;}
+div.bandeauActu {background-image: none;}
+div.bandeauMonCompte {background-image:none;}
+div.bandeauTv {background-image: none;}
+div.bandeauLoi {background-image: none;}
+
+
+
+/* POUR IE6*/
+* html #menuDeroulant li a.theme{ background-image:none; }
+* html #menuDeroulant li a:hover.theme { background-image:none;}
+* html#menuDeroulant li a.revue{ background-image:none;}
+* html #menuDeroulant li a:hover.revue{ background-image:none;}
+* html #menuDeroulant li a.supplements{ background-image:none;}
+* html #menuDeroulant li a:hover.supplements{ background-image:none;}
+* html #menuDeroulant li a.memento{ background-image:none;}
+* html #menuDeroulant li a:hover.memento{ background-image:none;}
+* html #menuDeroulant li a.outils{ background-image:none;}
+* html #menuDeroulant li a:hover.outils{background-image:none;}
+* html #menuDeroulant li a.abonnez{ background-image:none;}
+* html #menuDeroulant li a:hover.abonnez{background-image:none;}
+* html #menuDeroulant li a.boutique{ background-image:none;}
+* html #menuDeroulant li a:hover.boutique{ background-image:none;}
+
+#menuDeroulant li.actus{ background-image:none;}
+#menuDeroulant li.theme{ background-image:none;}
+#menuDeroulant li.revue{ background-image:none;}
+#menuDeroulant li.supplements{ background-image:none;}
+#menuDeroulant li.memento{ background-image:none;}
+#menuDeroulant li.outils{ background-image:none;}
+#menuDeroulant li.abonnez{ background-image:none;}
+#menuDeroulant li.boutique{ background-image:none;}
+
+
+
+/* MENUS ON*/
+#menuDeroulant li:hover.actus { background-image:none;}
+#menuDeroulant li:hover.theme { background-image:none;}
+#menuDeroulant li:hover.revue{ background-image:none;}
+#menuDeroulant li:hover.supplements{ background-image:none;}
+#menuDeroulant li:hover.memento{ background-image:none;}
+#menuDeroulant li:hover.outils{ background-image:none;}
+#menuDeroulant li:hover.abonnez{ background-image:none;}
+#menuDeroulant li:hover.boutique{ background-image:none;}
+
+#menuDeroulant {
+    border: 0 none;
+    height: 94px;
+    //left: 200px;
+    right:0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 26px;
+    width: 651px;
+	font-family: Verdana,Arial,Geneva,Helvetica,sans-serif;
+	z-index:10;
+}
+#menuDeroulant li.menu {
+    border: 0 none;
+    float: left;
+    margin: 0;
+    padding: 0;
+	/*position:relative;*/
+	z-index:10;
+}
+#menuDeroulant li a:link, #menuDeroulant li a:visited {
+    color: #263C46;
+    display: block;
+    margin: 0;
+    text-decoration: none;
+	text-transform:uppercase;
+	font-size:12px!important;
+	font-weight:400;
+	text-align:center;
+	}
+
+#menuDeroulant li a.niveau1{ height:34px; padding: 18px 0px 50px 0px; width: 93px;}
+#menuDeroulant .sousMenu li a:hover{ background-color:#263C46!important; color:#FFF!important;}
+#menuDeroulant .sousMenu {
+    border: 0 none;
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 30px 0 0 0;
+	margin-top:4px;
+	white-space:nowrap;
+	background:#fff;
+}
+#menuDeroulant .sousMenu li {
+    float: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+#menuDeroulant .sousMenu li a:link, #menuDeroulant .sousMenu li a:visited {
+    border: 0 none;
+    color: #263c46;
+    display: block;
+    margin: 0;
+    text-decoration: none;
+	padding:5px 15px;
+	font-weight:300;
+	text-align:left;
+	padding-left:20px;
+}
+#menuDeroulant .sousMenu li.title_ss_menu  a{padding:5px 15px;}
+#menuDeroulant .sousMenu li a:hover {
+    background-image: none;
+}
+#menuDeroulant li:hover > .sousMenu {
+    display: block;  box-shadow:0 6px 12px rgba(0, 0, 0, 0.176);
+}
+#menuDeroulant ul.sousMenu li a.title_ss_menu{ font-weight:400; color:#263c46; text-decoration:underline;}
+#menuDeroulant ul.sousMenu li.title_ss_menu{ border-bottom:0px; }
+#menuDeroulant ul.sousMenu li.title_ss_menu a.no_lien{ text-decoration:none;}
+#menuDeroulant ul.sousMenu li.title_ss_menu a.no_cursor{ cursor: default;}
+/* ne pas afficher le theme */
+p.domaine domaine{
+    display:none;
+}
+
+#menuConnecte {
+    border: 0 none;
+    height: 94px;
+    list-style-type: none;
+    right:0px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    width: auto;
+	font-family: "Open Sans",sans-serif;
+	z-index:2000;
+
+}
+div#sitesRF div{ z-index:99999999999999;}
+#menuConnecte li.menu {
+    border: 0 none;
+    float: left;
+    margin: 0;
+    padding: 0;
+	/*position:relative;*/
+	z-index:10;
+}
+#menuConnecte li a:link span, #menuConnecte li a:visited span{
+    color: #FFF;
+    margin: 0;
+    text-decoration: none;
+	text-transform:uppercase;
+	font-size:14px!important;
+	font-weight:300;
+	text-align:center;
+	}
+#menuConnecte li a:hover{text-decoration:none!important;}
+#menuConnecte li div.monCompte a span.fa-power-off{ color:#FFFFFF!important;}
+#menuConnecte li a:link span.fa-power-off:hover{ color:#c9181f!important;}
+#menuConnecte li a:link span.nom_abo:hover{ text-decoration:none!important;}
+#menuConnecte li a.niveau1{ height:34px; padding: 60px 0px 0px 0px; width: 93px;}
+#menuConnecte li a:hover{ color:#FFFFFF;}
+#menuConnecte .sousMenu {
+    border: 0 none;
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	background-color:#FFF;
+	position:absolute;
+	top:50px;
+	z-index:9999999999999;
+	background-color:#FFF;
+	width:205px;
+	box-shadow:0 6px 12px rgba(0, 0, 0, 0.176);
+}
+#menuConnecte .sousMenu li {
+    float: none;
+    margin: 0;
+    padding: 0px;
+	line-height:26px;
+
+}
+#menuConnecte .sousMenu li:hover{ color:#FFFFFF; background-color:#263C46;}
+#menuConnecte .sousMenu li a:hover { color:#FFFFFF; }
+#menuConnecte .sousMenu li:hover > a, #menuConnecte .sousMenu li:hover > a span{ color:#FFF!important; }
+#menuConnecte .sousMenu li.no-hover:hover{ background-color:#FFF;}
+#menuConnecte .sousMenu li.no-hover:hover > a, #menuConnecte .sousMenu li.no-hover:hover > a span{ color:#263c46; }
+#menuConnecte .sousMenu li a:link, #menuConnecte .sousMenu li a:visited {
+    border: 0 none;
+    color: #263c46;
+    margin: 0;
+    text-decoration: none;
+	padding:10px;
+	font-weight:300;
+	text-align:left;
+	text-transform:none;
+	font-size:14px;
+	font-family: "Open Sans",sans-serif;
+}
+.dark{ color:#263c46!important; font-size:14px;}
+.ssm a{ font-weight:300; font-size:30px;}
+.light{ color:#FFF; font-size:18px;}
+#menuConnecte .sousMenu li a:hover {
+    background-image: none;
+	color:#FFFFFF!important;
+}
+/*#menuConnecte li:hover > .sousMenu {
+    display: block;
+}*/
+#menuConnecte ul.sousMenu li a.title_ss_menu{ font-weight:bold; color:#FFFFFF; text-decoration:underline;}
+#menuConnecte ul.sousMenu li.title_ss_menu{ border-bottom:0px; }
+#menuConnecte ul.sousMenu li.title_ss_menu a.no_lien{ text-decoration:none;}
+#menuConnecte ul.sousMenu li.title_ss_menu a.no_cursor{ cursor: default;}
+
+.fa-power-off{ font-size:22px; color:#FFF;}
+.fa-power-off:hover{ color:#c9181f;}
+li.divider{background-color: #e5e5e5; height: 1px; margin: 9px 0!important; overflow: hidden;}
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+   margin:0px 0px 0px 5px;
+    padding: 8px 16px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+	background-color:#263c46;
+	color:#FFFFFF;
+}
+a.site_header_code{font-family:"Open Sans",sans-serif;}
+
+.fa-menu{position:absolute;top:16px;left:28px; color:#263C46; font-size:32px!important;}
+#menuDeroulant li.abonnez .fa-menu, #menuDeroulant li.boutique .fa-menu{color:#8fd9d6;}	
+
+.sousMenu.sousM2{
+position: relative;
+left: 258px;
+top: -30px;
+background-color: #F2F2F2;}
+.dir > a, .dir a:hover{padding-right: 15px;}
+.sous_sous{color:#263c46;}
+
+li.menu i.icon-actu, li.menu i.icon-revue, li.menu i.icon-mensuel, li.menu i.icon-dico, li.menu i.icon-outil, li.menu i.icon-boutique, li.menu i.icon-cj, li.menu i.icon-notebook-bookmarked, li.menu .icon-notebook, li.menu i.icon-building-9{ display:block; font-size:34px; line-height:; margin-bottom:15px; }
+

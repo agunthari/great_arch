@@ -1,0 +1,49 @@
+{# /templates/pages/rf-social/actu.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+		
+
+
+		
+{% endblock %}
+
+{% block title %}Actualités | RF Social | Revue Fiduciaire{% endblock %}
+
+{% block metas %}
+	{% set meta = {
+        description : "",
+        keywords : "",
+    } %}
+
+	{{ parent() }}
+{% endblock %}
+
+
+{% block metas_twitter %}
+	{% set meta_twitter = {
+        title : "",
+        description : "",
+        image : "A définir",
+        image_alt : "Ceci est une jolie image RF",
+        card : "summary_large_image",
+    } %}
+
+	{{ parent() }}
+{% endblock %}
+
+
+{% block metas_og %}
+    {% set meta_og = {
+        title : "",
+        description : "",
+        image : "A définir",
+        image_width : 0,
+        image_height : 0,
+    } %}
+
+	{{ parent() }}
+{% endblock %}

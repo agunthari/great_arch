@@ -1,3 +1,5 @@
+{# /templates/base.html.twig #}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -80,13 +82,28 @@
         {% block javascripts %}
             <script src="{{ asset('js/contrib/jquery.js') }}" type="text/javascript"></script>
             <script src="{{ asset('js/contrib/jquery-ui.min.js') }}" type="text/javascript"></script>
-            <script src="{{ asset('js/contrib/MathJax.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('js/contrib/bootstrap.min.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('js/contrib/bootstrap-hover.min.js') }}" type="text/javascript"></script>
+            {#<script src="{{ asset('js/contrib/MathJax.js') }}" type="text/javascript"></script>#}
             <script src="{{ asset('js/contrib/bxslider.js') }}" type="text/javascript"></script>
 
             <script src="{{ asset('js/scripts.js') }}" type="text/javascript"></script>
         {% endblock %}
     </head>
     <body>
+        {% if app.request.server.get('APP_ENV') == 'dev' %}
+          <div style="position:fixed;top:150px;left:0;z-index:10000000;background:rgba(0,0,0,0.5);color:#ffffff;padding:5px;">
+            <div class="visible-lg hidden-md hidden-sm hidden-xs testIsLg">LG</div>
+            <div class="hidden-lg visible-md hidden-sm hidden-xstestIsMd">MD</div>
+            <div class="hidden-lg hidden-md visible-sm hidden-xs testIsSm">SM</div>
+            <div class="hidden-lg hidden-md hidden-sm visible-xs testIsXs">XS</div>
+          </div>
+        {% endif %}
+
+        {{ include('blocs/bloc_rs.html.twig') }}
+
+        {{ include('blocs/menu.html.twig') }}
+
         {% block body %}{% endblock %}
     </body>
 </html>

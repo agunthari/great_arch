@@ -105,9 +105,10 @@
           </div>
         {% endif %}
 
+        {{ include('menu/base_menu.html.twig') }}
+
         {{ include('blocs/bloc_rs.html.twig') }}
 
-        {{ include('blocs/menu.html.twig') }}
 
         {% block body %}{% endblock %}
     </body>

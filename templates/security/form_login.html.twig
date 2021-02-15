@@ -1,0 +1,41 @@
+{# /templates/security/form_login.html.twig #}
+
+<form action="{{ path('app_login') }}" method="post" >
+	<input type="hidden" name="redirect_url" value="/" />
+  	<ul id="menuConnecte">
+		<li>
+			<div class="monCompte">
+				<a href="#" class="lien_connec">
+					<i class="icon icon-account-circle-1"></i>
+					<span class="txt_users">Se connecter</span>
+				</a> 
+			</div>
+			<ul class="sousMenu connect_user">
+				<li class="no-hover">							
+					<input id="identifiant" class="site_header_login" type="email" name="email" autocomplete="false" onKeyPress="if(event.keyCode == 13) submit();" value="{#{{ last_username }}#}" placeholder="identifiant" required />
+				</li>
+				<li class="no-hover">							
+					<input id="passe" class="site_header_pass" type="password" name="password" autocomplete="false" onKeyPress="if(event.keyCode == 13) submit();" value="" placeholder="mot de passe" required />
+				</li>
+				<li class="no-hover">
+					<input type="hidden" name="_csrf_token"
+           				value="{{ csrf_token('authenticate') }}"
+    				/>
+					<button style="width:94%" onclick="submit();" class="btn btn-success" id="bouton-connexion" type="button">Me connecter</button>
+				</li>
+				{#
+			        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+			        See https://symfony.com/doc/current/security/remember_me.html
+
+			        <div class="checkbox mb-3">
+			            <label>
+			                <input type="checkbox" name="_remember_me"> Remember me
+			            </label>
+			        </div>
+			    #}
+				<li class="divider"></li>
+				<li><a href="#" target="_blank" class="site_header_code">Mot de passe oubli&eacute; ?</a></li>
+			</ul>
+		</li>
+	</ul>
+</form>

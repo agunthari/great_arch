@@ -1,0 +1,30 @@
+<ul class="nav navbar-nav navbar-right nameUserWpp" id="panneau_connection" style="padding-top:16px;">
+	<li class="dropdown" style="margin-right:40px;">
+		<i class="icon icon-account-circle-1 userLg " style=" float:left; color:#1D1D1B; font-size: 24px;"></i>
+		<a href="#" id="connection_lg" class="dropdown-toggle" style="" data-toggle="dropdown" data-hover="dropdown">
+			<span class="">DIARTE CELINE</span>
+			<span class="hidden-lg hidden-md hidden-sm">...</span>
+			<i class="icon icon-arrow-down-12"></i>
+		</a>
+		<ul class="dropdown-menu pull-right openHover menuUserWPP" role="menu">
+			<li class="ssm titlessm">
+				<a onclick="javascript:UpdateGrid();return false;" id="maj">
+					<span class="fa fa-refresh" style="margin-right:10px;"></span>
+					Mise en page par défaut
+				</a>
+			</li>
+			<li class="ssm titlessm"><a onclick="javascript:SaveGrid();return false;" id="saveGrid"><span class="fa fa-upload" style="margin-right:10px;"></span>Sauvegarder la mise en page</a></li>
+			<li class="ssm titlessm"><a id="openBiblio" class="hidden"><span class="fa fa-plus" style="margin-right:10px;"></span>Ajouter un accès direct</a></li>
+			
+			<li class="title_menu"><a href="/compte/"><span class="fa fa-user" style="margin-right:10px;"></span>Mon espace abonné</a></li>
+			<li class="ssm"><a href="/compte/index.php?page=newsletter"><span class="fa fa-angle-right" style="margin-left:6px;margin-right:10px;"></span>Mes newsletters</a></li>
+			
+			<li class="ssm"><a href="/compte/index.php?page=push"><span class="fa fa-angle-right" style="margin-left:6px;margin-right:10px;"></span>Ma veille d'actualité</a></li> 
+			<li class="ssm"><a href="/compte/index.php?page=dossiers"><span class="fa fa-angle-right" style="margin-left:6px;margin-right:10px;"></span>Mes dossiers</a></li>				
+			<li class="title_menu"><a href="http://moncompte.grouperf.com" target="_blank"><span class="fa fa-lock" style="margin-right:10px;"></span>Mon compte</a></li>
+			<li class="ssm"><a href="http://moncompte.grouperf.com/identifiants" target="_blank"><span class="fa fa-angle-right" style="margin-left:6px;margin-right:10px;"></span>Modifier mes identifiants</a></li>
+			
+			<li class="title_menu"><a href="{{ path('app_logout') }}" class="out"><span class="fa fa-power-off" style="margin-right:10px;"></span>Déconnexion</a></li>
+		  </ul>
+    </li>
+</ul>

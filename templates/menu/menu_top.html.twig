@@ -1,0 +1,23 @@
+{# /templates/menu/menu_top.html.twig #}
+
+<div class="navbar navbar-default navbar-relative-top">
+	<div class="container text-left " >
+		<a href="{{ path('rf_social__home') }}">
+			<img src="{{ asset('img/logo.png') }}" alt="RFSocial" class="logoSite">
+		</a><br/>
+		<div class="contain_badge"></div>
+	</div>
+	<div class="header-right">
+		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+			{{ include('menu/menu_connected.html.twig') }}
+		{% else %}
+			{{ include('security/form_login.html.twig') }}
+	
+			<span class="lineV"> | </span>
+			<a href="https://boutique.grouperf.com/produit/rf-social?code_campagne=0000PT30SW00001&utm_source=btn-site-presse&utm_medium=btn-header&utm_campaign=site-presse-RF-Social" target="_blank">
+				<button type="button" class="btn btn-primary" style="background-color:#E6184A; color:#FFFFFF;">S&apos;abonner</button>
+			</a>
+			<!-- Fin Formulaire de connexion -->
+		{% endif %}
+	</div>
+</div>

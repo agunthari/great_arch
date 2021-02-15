@@ -64,7 +64,12 @@ npm i gulp -g
 
 ### Compilation des scripts et des less
 ```bash
-gulp build-less
+gulp
+```
+
+### Compilation des scripts et des less automatique
+```bash
+gulp watch
 ```
 
 ### Vider le cache Symfony

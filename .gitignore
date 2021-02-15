@@ -19,5 +19,7 @@
 ###> node_modules ###
 /node_modules
 /public/css/styles.css
+/public/css/styles.min.css
 /public/js/scripts.js
+/public/js/scripts.min.js
 ###< node_modules ###

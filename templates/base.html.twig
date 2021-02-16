@@ -86,6 +86,7 @@
             <script src="{{ asset('js/contrib/bootstrap-hover.min.js') }}" type="text/javascript"></script>
             {#<script src="{{ asset('js/contrib/MathJax.js') }}" type="text/javascript"></script>#}
             <script src="{{ asset('js/contrib/bxslider.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('js/contrib/jcarousellite_1.0.1.min.js') }}" type="text/javascript"></script>
             
             {% if app.request.server.get('APP_ENV') == 'dev' %}
                 <script src="{{ asset('http://rf.local:35729/livereload.js?snipver=1') }}"></script>
@@ -108,7 +109,6 @@
         {{ include('menu/base_menu.html.twig') }}
 
         {{ include('blocs/bloc_rs.html.twig') }}
-
 
         {% block body %}{% endblock %}
     </body>

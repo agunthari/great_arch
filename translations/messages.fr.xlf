@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="date_monday">
+                <source>Monday</source>
+                <target>Lundi</target>
+            </trans-unit>
+            <trans-unit id="date_tuesday">
+                <source>Tuesday</source>
+                <target>Mardi</target>
+            </trans-unit>
+            <trans-unit id="date_wednesday">
+                <source>Wednesday</source>
+                <target>Mercredi</target>
+            </trans-unit>
+            <trans-unit id="date_thusday">
+                <source>Thusday</source>
+                <target>Jeudi</target>
+            </trans-unit>
+            <trans-unit id="date_friday">
+                <source>Friday</source>
+                <target>Vendredi</target>
+            </trans-unit>
+            <trans-unit id="date_saturday">
+                <source>Saturday</source>
+                <target>Samedi</target>
+            </trans-unit>
+            <trans-unit id="date_sunday">
+                <source>Sunday</source>
+                <target>Dimanche</target>
+            </trans-unit>
+            <trans-unit id="date_january">
+                <source>January</source>
+                <target>janvier</target>
+            </trans-unit>
+            <trans-unit id="date_february">
+                <source>February</source>
+                <target>février</target>
+            </trans-unit>
+            <trans-unit id="date_march">
+                <source>March</source>
+                <target>mars</target>
+            </trans-unit>
+            <trans-unit id="date_april">
+                <source>April</source>
+                <target>avril</target>
+            </trans-unit>
+            <trans-unit id="date_may">
+                <source>May</source>
+                <target>mai</target>
+            </trans-unit>
+            <trans-unit id="date_june">
+                <source>June</source>
+                <target>juin</target>
+            </trans-unit>
+            <trans-unit id="date_july">
+                <source>July</source>
+                <target>juillet</target>
+            </trans-unit>
+             <trans-unit id="date_august">
+                <source>August</source>
+                <target>aout</target>
+            </trans-unit>
+            <trans-unit id="date_septembre">
+                <source>September</source>
+                <target>septembre</target>
+            </trans-unit>
+            <trans-unit id="date_october">
+                <source>October</source>
+                <target>octobre</target>
+            </trans-unit>
+            <trans-unit id="date_november">
+                <source>November</source>
+                <target>novembre</target>
+            </trans-unit>
+            <trans-unit id="date_december">
+                <source>December</source>
+                <target>décembre</target>
+            </trans-unit>
+            <trans-unit id="date_jan">
+                <source>Jan</source>
+                <target>janv.</target>
+            </trans-unit>
+            <trans-unit id="date_feb">
+                <source>Feb</source>
+                <target>fév.</target>
+            </trans-unit>
+            <trans-unit id="date_mar">
+                <source>Mar</source>
+                <target>mars</target>
+            </trans-unit>
+            <trans-unit id="date_apr">
+                <source>Apr</source>
+                <target>avr.</target>
+            </trans-unit>
+            <trans-unit id="date_m">
+                <source>May</source>
+                <target>mai</target>
+            </trans-unit>
+            <trans-unit id="date_jun">
+                <source>Jun</source>
+                <target>juin</target>
+            </trans-unit>
+            <trans-unit id="date_jul">
+                <source>Jul</source>
+                <target>juil.</target>
+            </trans-unit>
+             <trans-unit id="date_aug">
+                <source>Aug</source>
+                <target>aout</target>
+            </trans-unit>
+            <trans-unit id="date_sept">
+                <source>Sep</source>
+                <target>sept.</target>
+            </trans-unit>
+            <trans-unit id="date_oct">
+                <source>Oct</source>
+                <target>oct.</target>
+            </trans-unit>
+            <trans-unit id="date_nov">
+                <source>Nov</source>
+                <target>nov.</target>
+            </trans-unit>
+            <trans-unit id="date_dec">
+                <source>Dec</source>
+                <target>déc.</target>
+            </trans-unit>
+            <!-- <trans-unit id="frequency_realtime">
+                <source>realtime</source>
+                <target>en temps réel</target>
+            </trans-unit>
+            <trans-unit id="frequency_daily">
+                <source>daily</source>
+                <target>par jour</target>
+            </trans-unit>
+            <trans-unit id="frequency_weekly">
+                <source>weekly</source>
+                <target>par semaine</target>
+            </trans-unit>
+            <trans-unit id="frequency_monthly">
+                <source>monthly</source>
+                <target>par mois</target>
+            </trans-unit> -->
+        </body>
+    </file>
+</xliff>

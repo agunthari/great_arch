@@ -24,9 +24,12 @@ class UserFixtures extends Fixture
        	$user->setEmail('agontier@grouperf.com')
             ->setSalt( $salt )
         	->setPassword($this->passwordEncoder->encodePassword(
-            $user,
-            'HelloWorld'
-	    ));
+                $user,
+                'HelloWorld'
+	        ))
+            ->setFirstname( 'Adrien' )
+            ->setLastname( 'Gontier' )
+        ;
         	
         $manager->persist($user);
 
@@ -35,9 +38,12 @@ class UserFixtures extends Fixture
         $user->setEmail('jwullems@grouperf.com')
             ->setSalt( $salt )
             ->setPassword($this->passwordEncoder->encodePassword(
-            $user,
-            'HelloWorld'
-        ));
+                $user,
+                'HelloWorld'
+            ))
+            ->setFirstname( 'Julie' )
+            ->setLastname( 'Wullems' )
+        ;
             
         $manager->persist($user);
 

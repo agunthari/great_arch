@@ -8,6 +8,7 @@ const livereload = require('gulp-livereload');
 const js_files = [
 	'fonctions.js',
 	'grf.js',
+	'scaffolding.js',
 ];
 
 function buildLess (){

@@ -76,3 +76,18 @@ gulp watch
 ```bash
 php bin/console cache:clear --env=prod
 ```
+
+### export des schemas de Base de Donnees dans /migrations
+```bash
+php bin/console make:migration
+```
+
+### mise a jour des schemas de Base de Donnees
+```bash
+php bin/console doctrine:migrations:migrate
+```
+
+### Population des entites
+```bash
+php bin/console doctrine:fixtures:load
+```

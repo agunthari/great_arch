@@ -2,10 +2,10 @@
 
 {% extends 'bo/base.html.twig' %}
 
-{% block title %}Listes Articles | {{ parent() }}{% endblock %}
+{% block title %}Liste Articles | {{ parent() }}{% endblock %}
 
 {% block nav_content %}
-	{% set page_title = 'Listes Articles' %}
+	{% set page_title = 'Liste Articles' %}
 	{% set add_item_url = path('bo__article__new') %}
 	{{ parent() }}
 {% endblock %}

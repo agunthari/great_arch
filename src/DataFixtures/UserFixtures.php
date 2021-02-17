@@ -46,6 +46,8 @@ class UserFixtures extends Fixture
             ->setLastname( 'Wullems' )
             ->setRoles(['ROLE_ADMIN'])
         ;
+        
+        $manager->persist($user);
 
         $user = new User();
         $salt = base64_encode( random_bytes(20) );

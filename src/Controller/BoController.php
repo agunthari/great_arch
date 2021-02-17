@@ -6,7 +6,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Form\FormFactoryInterface;
 
 use App\Form\Type\ArticleType;
 use App\Entity\Article;
@@ -38,18 +37,13 @@ class BoController extends AbstractController
     /**
      * @Route("/bo/article/{article}", name="bo__article__edit")
      */
-    public function article_edit(Request $request, FormFactoryInterface $formFactory, Article $article): Response
+    public function article_edit(Request $request, Article $article): Response
     {
-        $form = $formFactory->createBuilder(ArticleType::class, $article, [
-            // 'action' => '/search',
-            // 'method' => 'GET',
-        ])->getForm();
+        $form = $this->createForm(ArticleType::class, $article);
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
-            // $article = $form->getData();
-
             $this->getDoctrine()->getManager()->flush();
         }
 

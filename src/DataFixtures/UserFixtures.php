@@ -29,6 +29,7 @@ class UserFixtures extends Fixture
 	        ))
             ->setFirstname( 'Adrien' )
             ->setLastname( 'Gontier' )
+            ->setRoles(['ROLE_ADMIN'])
         ;
         	
         $manager->persist($user);
@@ -43,6 +44,20 @@ class UserFixtures extends Fixture
             ))
             ->setFirstname( 'Julie' )
             ->setLastname( 'Wullems' )
+            ->setRoles(['ROLE_ADMIN'])
+        ;
+
+        $user = new User();
+        $salt = base64_encode( random_bytes(20) );
+        $user->setEmail('user@grouperf.com')
+            ->setSalt( $salt )
+            ->setPassword($this->passwordEncoder->encodePassword(
+                $user,
+                'HelloWorld'
+            ))
+            ->setFirstname( 'User' )
+            ->setLastname( 'Test' )
+            ->setRoles(['ROLE_USER'])
         ;
             
         $manager->persist($user);

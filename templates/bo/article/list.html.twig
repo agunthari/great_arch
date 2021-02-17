@@ -4,32 +4,36 @@
 
 {% block title %}Listes Articles | {{ parent() }}{% endblock %}
 
-	{% block body %}
-		<div class="container">
-			<h1>Listes Articles</h1>
-			<table class="stripped">
-				<thead>
-					<tr>
-						<th>Titre</th>
-						<th>Categorie</th>
-						<th>Date de Publication</th>
-						<th>Manage</th>
-					</tr>
-				</thead>
+{% block nav_content %}
+	{% set page_title = 'Listes Articles' %}
+	{% set add_item_url = path('bo__article__new') %}
+	{{ parent() }}
+{% endblock %}
 
-				<tbody>
-					{% for item in collection %}
-						<tr>
-							<td><a href="{{ path('bo__article__edit', {article: item.id}) }}">{{ item.title }}</a></td>
-							<td>{{ item.category }}</td>
-							<td>{{ item.publicationDate|date('d/m/Y') }}</td>
-							<td>
-								<a href="{{ path('bo__article__edit', {article: item.id}) }}" class="btn teal">Edit</a>
-								<a href="{{ path('bo__article__delete', {article: item.id}) }}" class="btn red">Delete</a>
-							</td>
-						</tr>
-					{% endfor %}
-				</tbody>
-			</table>
-		</div>
-	{% endblock %}
+{% block body %}
+	<div class="container">
+		<table class="stripped">
+			<thead>
+				<tr>
+					<th>Titre</th>
+					<th>Categorie</th>
+					<th>Date de Publication</th>
+					<th>Manage</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for item in collection %}
+					<tr>
+						<td><a href="{{ path('bo__article__edit', {article: item.id}) }}">{{ item.title }}</a></td>
+						<td>{{ item.category }}</td>
+						<td>{{ item.publicationDate|date('d/m/Y') }}</td>
+						<td>
+							<a href="{{ path('bo__article__edit', {article: item.id}) }}" class="btn teal">Edit</a>
+							<a href="{{ path('bo__article__delete', {article: item.id}) }}" class="btn red">Delete</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endblock %}

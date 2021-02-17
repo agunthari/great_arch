@@ -126,6 +126,12 @@
                 <source>Dec</source>
                 <target>déc.</target>
             </trans-unit>
+            <!-- <trans-unit id="title_too_short">
+                <source>Title too short (min %limit%)</source>
+                <target>Titre trop court (min %limit%)</target>
+            </trans-unit> -->
+
+            
             <!-- <trans-unit id="frequency_realtime">
                 <source>realtime</source>
                 <target>en temps réel</target>

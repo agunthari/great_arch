@@ -2,8 +2,10 @@
 
 namespace App\Entity;
 
-use App\Repository\ArticleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+use App\Repository\ArticleRepository;
 use DateTime;
 
 /**
@@ -20,21 +22,41 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Type("string")
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *      min = 10,
+     *      max = 255,
+     *      minMessage = "Title too short (min {{ limit }})",
+     *      maxMessage = "Title too long (max {{ limit }})"
+     * )
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=2000)
+     * @Assert\Type("string")
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *      min = 10,
+     *      max = 2000,
+     *      minMessage = "Teaser too short (min {{ limit }})",
+     *      maxMessage = "Teaser too long (max {{ limit }})"
+     * )
      */
     private $teaser;
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\Type("string")
+     * @Assert\NotBlank
      */
     private $category;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\Type("\DateTime")
+     * @Assert\NotBlank
      */
     private $publication_date;
 

@@ -35,6 +35,28 @@ class BoController extends AbstractController
     }
 
     /**
+     * @Route("/bo/article/new", name="bo__article__new")
+     */
+    public function article_new(Request $request): Response
+    {
+        $article = new Article();
+
+        $form = $this->createForm(ArticleType::class, $article);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $this->getDoctrine()->getManager()->persist($article);
+            $this->getDoctrine()->getManager()->flush();
+            return $this->redirectToRoute('bo__article__edit', ['article' => $article->getId()]);
+        }
+
+        return $this->render('bo/article/edit.html.twig', [
+            'item' => $article,
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
      * @Route("/bo/article/{article}", name="bo__article__edit")
      */
     public function article_edit(Request $request, Article $article): Response

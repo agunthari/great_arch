@@ -2,22 +2,24 @@
 
 {% extends 'bo/base.html.twig' %}
 
-{% block title %}Edition Article | {{ parent() }}{% endblock %}
+{% block title %}{{ item is not null and item.id is not null ? 'Edition Article' : 'Creation Article' }} | {{ parent() }}{% endblock %}
+
+{% block nav_content %}
+	{% set page_title = (item is not null and item.id is not null ? 'Edition Article' : 'Creation Article') %}
+	{{ parent() }}
+{% endblock %}
 
 {% block body %}
 		
 	<div class="container">
 		{% if item is not defined or item is null %}
-			<h1>Edition Article</h1>
 			<p>Desole, l'article n'existe pas ou plus</p>
 			<p><a href="{{ path('bo__article__list') }}">Retour a la liste</a></p>
 		{% else %}
-			<h1>Edition Article : {{ item.title }}</h1>
-
+			<h2>{{ item.title }}</h2>
 			{{ form_start(form) }}
 				{{ form_errors(form) }}
 			    {{ form_widget(form) }}
-
 			    <input type="submit" class="btn teal" value="Enregistrer" />
 			{{ form_end(form) }}
 		{% endif %}

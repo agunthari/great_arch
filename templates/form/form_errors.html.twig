@@ -1,0 +1,9 @@
+{# /templates/form/form_errors.html.twig #}
+
+{%- block form_errors -%}
+    {%- if errors|length > 0 -%}
+        {%- for error in errors -%}
+			<span class="helper-text red-text" data-error="wrong" >{{ error.message|trans }}</span>
+        {%- endfor -%}
+    {%- endif -%}
+{%- endblock form_errors -%}

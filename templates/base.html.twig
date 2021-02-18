@@ -97,6 +97,11 @@
         {% endblock %}
     </head>
     <body>
+        <div class="mega">
+            {#<div id="megabanner" class="decal_pour_zoom">
+                <iframe src="/mega_bannieres.php" scrolling="no" height="90" width="728" frameborder="0"></iframe>
+            </div>#}
+        </div>
         {% if app.request.server.get('APP_ENV') == 'dev' %}
           <div style="position:fixed;top:150px;left:0;z-index:10000000;background:rgba(0,0,0,0.5);color:#ffffff;padding:5px;">
             <div class="visible-lg hidden-md hidden-sm hidden-xs testIsLg">LG</div>

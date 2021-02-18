@@ -1,0 +1,27 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<section class="container">
+	    <h1>Page not found</h1>
+	    <p>
+	        The requested page couldn't be located. Checkout for any URL
+	        misspelling or <a href="{{ path('rf_social__home') }}">return to the homepage</a>.
+	    </p>
+    </section>
+{% endblock %}
+
+{% block title %}Page Introuvable | {{ parent() }}{% endblock %}
+
+{% block metas %}
+    {% set meta = {
+        description : (meta is defined and meta.description is defined ? meta.description : "Page 404"),
+        keywords : (meta is defined and meta.keywords is defined ? meta.keywords : "page 404"),
+        robots : (meta is defined and meta.robots is defined ? meta.robots : "noindex,nofollow"),
+    } %}
+    {{ parent() }}
+{% endblock %}
+
+{% block metas_twitter %}{% endblock %}
+
+{% block metas_og %}{% endblock %}

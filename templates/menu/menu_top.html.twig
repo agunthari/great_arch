@@ -11,7 +11,7 @@
 		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 			{{ include('menu/menu_connected.html.twig') }}
 		{% else %}
-			{{ include('security/form_login.html.twig') }}
+			{{ include('security/_form_login_nav.html.twig') }}
 	
 			<span class="lineV"> | </span>
 			<a href="https://boutique.grouperf.com/produit/rf-social?code_campagne=0000PT30SW00001&utm_source=btn-site-presse&utm_medium=btn-header&utm_campaign=site-presse-RF-Social" target="_blank">

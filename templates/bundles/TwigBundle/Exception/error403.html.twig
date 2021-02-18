@@ -1,0 +1,29 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<section class="container">
+	    <h1>Page Non Autorised</h1>
+	    <p>
+	         <a href="{{ path('rf_social__home') }}">return to the homepage</a>.
+	    </p>
+    </section>
+    <section class="container">
+        {{ include('security/_form_login.html.twig') }}
+    </section>
+{% endblock %}
+
+{% block title %}Page Non Autorisée | {{ parent() }}{% endblock %}
+
+{% block metas %}
+    {% set meta = {
+        description : (meta is defined and meta.description is defined ? meta.description : "Page 403"),
+        keywords : (meta is defined and meta.keywords is defined ? meta.keywords : "page 403"),
+        robots : (meta is defined and meta.robots is defined ? meta.robots : "noindex,nofollow"),
+    } %}
+    {{ parent() }}
+{% endblock %}
+
+{% block metas_twitter %}{% endblock %}
+
+{% block metas_og %}{% endblock %}

@@ -53,6 +53,8 @@ Dans votre terminal, aller a la racine du projet et lancer l'installation via la
 ```bash
 composer install
 ```
+Il vous sera demandé de valider la migration des schémas de base de données. Taper yes si vous êtes d'accord.
+
 Composer install lancera automatiquement des commandes suivantes "npm install", "gulp", "php bin/console doctrine:migrations:migrate", "php bin/console cache:clear" permettant de terminer l'installation.
 
 Vous pourrez alors utiliser la commande composer install afin de mettre a jour tout le projet en local en une seule commande ;)

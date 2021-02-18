@@ -45,22 +45,28 @@ Define INSTALL_DIR /path/to/install
 
 ### Application
 
-Dans votre terminal, aller a la racine du projet et lancer l'installation via la commande composer :
-```bash
-composer install
-```
-Puis, installer les modules Nodes JS :
-```bash
-npm install
-```
 Installer Gulp en global afin de generer les fichiers de styles et de scripts
 ```bash
 npm i gulp -g
 ```
+Dans votre terminal, aller a la racine du projet et lancer l'installation via la commande composer :
+```bash
+composer install
+```
+Composer install lancera automatiquement des commandes suivantes "npm install", "gulp", "php bin/console doctrine:migrations:migrate", "php bin/console cache:clear" permettant de terminer l'installation.
+
+Vous pourrez alors utiliser la commande composer install afin de mettre a jour tout le projet en local en une seule commande ;)
+
 
 ---
 
 ## Utilisation
+
+### Instllation des dependances NodeJs
+Puis, installer les modules Nodes JS :
+```bash
+npm install
+```
 
 ### Compilation des scripts et des less
 ```bash

@@ -1,0 +1,72 @@
+{# @app/pages/rf/_rf_nav.html.twig #}
+
+<div class="page-nav">
+	<div class="container">
+		<div class="row">
+		  <div class="col-sm">
+		    <ul class="nav">
+				  <li class="nav-item">
+				    <img src="{{ asset('img/baseline_RF.B.png') }}"/>
+				  </li>
+				</ul>
+		  </div>
+		  <div class="col-sm">
+		    <ul class="nav justify-content-end">
+				  <li class="nav-item">
+				    <span>Je suis</span>
+				    <select class="form-select" aria-label="Default select example">
+						  <option selected>Sans Profile</option>
+						  <option value="1">One</option>
+						  <option value="2">Two</option>
+						  <option value="3">Three</option>
+						</select>
+				  </li>
+				  <li class="nav-item divider"></li>
+				  <li class="nav-item">
+						<div class="btn-group">
+							{{ include('@app/security/_form_login_nav.html.twig') }}
+						</div>
+
+				    <a class="nav-link" href="#"></a>
+				  </li>
+				</ul>
+		  </div>
+		</div>
+		<div class="row">
+		  <ul class="nav justify-content-center">
+			  <li class="nav-item">
+			    <a class="nav-link {{ app.request.attributes.get('_route') == 'rf__home' ? 'active' : '' }}" aria-current="page" href="{{ path('rf__home') }}">Accueil</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link {{ app.request.attributes.get('_route') == 'rf__our_values' ? 'active' : '' }}" href="{{ path('rf__our_values') }}">Qui sommes nous ?</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link {{ app.request.attributes.get('_route') == 'route' ? 'active' : '' }}" href="#">Notre expertise</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link {{ app.request.attributes.get('_route') == 'route' ? 'active' : '' }}" href="#">L'innovation</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link {{ app.request.attributes.get('_route') == 'route' ? 'active' : '' }}" href="#">Nos evenements</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link {{ app.request.attributes.get('_route') == 'route' ? 'active' : '' }}" href="#">Blog</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link {{ app.request.attributes.get('_route') == 'route' ? 'active' : '' }}" href="#">Nous rejoindre</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link {{ app.request.attributes.get('_route') == 'route' ? 'active' : '' }}" href="#">Contact</a>
+			  </li>
+			</ul>
+		</div>
+		<div class="row">
+		  <form class="d-flex">
+	      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-success" type="submit">Search</button>
+	    </form>
+		</div>
+	</div>
+</div>
+
+

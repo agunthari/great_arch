@@ -1,0 +1,32 @@
+{# @app/menu/_navbar.html.twig #}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ path('rf__home') }}">
+      <img src="{{ asset('img/logo_rf.png') }}"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link {{ 'rf__' in app.request.attributes.get('_route') ? 'active' : '' }}" aria-current="page" href="{{ path('rf__home') }}">Revue Fiduciaire</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ 'rf_myactu__' in app.request.attributes.get('_route') ? 'active' : '' }}" aria-current="page" href="{{ path('rf_myactu__home') }}">RF MyActu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ 'rf_premium__' in app.request.attributes.get('_route') ? 'active' : '' }}" aria-current="page" href="{{ path('rf_premium__home') }}" aria-current="page">RF Premium</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ 'rf_revues__' in app.request.attributes.get('_route') ? 'active' : '' }}" aria-current="page" href="{{ path('rf_revues__home') }}" aria-current="page">Les Revues</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ 'rf_editions__' in app.request.attributes.get('_route') ? 'active' : '' }}" aria-current="page" href="#" aria-current="page">Les Editions</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div style="display:block;height:69px;"></div>

@@ -1,16 +1,15 @@
-{# @app/pages/rf-social/home.html.twig #}
+{# @app/pages/rf/home.html.twig #}
 
 {% extends '@app/base.html.twig' %}
 
 
 {% block body %}
 
+    {{ include('@app/pages/rf/_rf_nav.html.twig') }}
 
-    {# {{ include('@app/blocs/home_selected_actu.html.twig') }}
-    
-    {{ include('@app/blocs/home_tools_services.html.twig') }} #}		
-
-
+    <section class="container">
+        <img src="{{ asset('img/cheat/nos-valeurs.jpg') }}"/>        
+    </section>
 		
 {% endblock %}
 

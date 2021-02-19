@@ -62,7 +62,6 @@ class BoController extends AbstractController
     public function article_edit(Request $request, Article $article): Response
     {
         $form = $this->createForm(ArticleType::class, $article);
-
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){

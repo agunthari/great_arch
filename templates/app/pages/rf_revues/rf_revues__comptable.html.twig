@@ -1,16 +1,14 @@
-{# @app/pages/rf-social/home.html.twig #}
+{# @app/pages/rf/home.html.twig #}
 
 {% extends '@app/base.html.twig' %}
 
 
 {% block body %}
 
+    {{ include('@app/pages/rf_revues/_nav.html.twig') }}
 
-    {# {{ include('@app/blocs/home_selected_actu.html.twig') }}
+    {{ include('@app/blocs/_home_actu.html.twig') }}
     
-    {{ include('@app/blocs/home_tools_services.html.twig') }} #}		
-
-
 		
 {% endblock %}
 

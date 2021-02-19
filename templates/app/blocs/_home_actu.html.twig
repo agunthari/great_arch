@@ -22,9 +22,9 @@
                         <img src="{{ asset('img/icons/bullet.png') }}">
                       </td>
                       <td style="vertical-align: top;overflow: hidden;">
-                        <a class="btn-category {{ item.category|lower|replace({' ':'-'}) }}" href="{{ path('rf_social__actu__article', {article : item.id })  }}">{{ item.category }}</a><br/>
-                        <a class="title-depeche" href="{{ path('rf_social__actu__article', {article : item.id })  }}">{{ item.title }}</a><br/>
-                        <a class="teaser-depeche" href="{{ path('rf_social__actu__article', {article : item.id })  }}">{{ item.teaser }}</a>
+                        <a class="btn-category {{ item.category|lower|replace({' ':'-'}) }}" href="{{ path('rf_article', {article : item.id })  }}">{{ item.category }}</a><br/>
+                        <a class="title-depeche" href="{{ path('rf_article', {article : item.id })  }}">{{ item.title }}</a><br/>
+                        <a class="teaser-depeche" href="{{ path('rf_article', {article : item.id })  }}">{{ item.teaser }}</a>
                       </td>
                     </tr>
                   </tbody>

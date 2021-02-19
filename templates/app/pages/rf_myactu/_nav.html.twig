@@ -12,25 +12,7 @@
 				</ul>
 		  </div>
 		  <div class="col-sm">
-		    <ul class="nav justify-content-end">
-				  <li class="nav-item">
-				    <span>Je suis</span>
-				    <select class="form-select" aria-label="Default select example">
-						  <option selected>Sans Profile</option>
-						  <option value="1">One</option>
-						  <option value="2">Two</option>
-						  <option value="3">Three</option>
-						</select>
-				  </li>
-				  <li class="nav-item divider"></li>
-				  <li class="nav-item">
-						<div class="btn-group">
-							{{ include('@app/security/_form_login_nav.html.twig') }}
-						</div>
-
-				    <a class="nav-link" href="#"></a>
-				  </li>
-				</ul>
+		    {{ include('@app/menu/_menu_user.html.twig') }}
 		  </div>
 		</div>
 		<div class="row">

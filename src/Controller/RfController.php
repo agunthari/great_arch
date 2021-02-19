@@ -32,5 +32,15 @@ class RfController extends AbstractController
         ]);
     }
 
+
+    /**
+     * @Route("/article/{article}", name="rf_article")
+     */
+    public function article_page(Article $article): Response
+    {
+        return $this->render('@app/pages/rf/nos_valeurs.html.twig', [
+        ]);
+    }
+
 }
 

@@ -105,7 +105,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
             return new RedirectResponse($this->urlGenerator->generate('bo__dashboard'));
         }
 
-        return new RedirectResponse($this->urlGenerator->generate('rf_social__home'));
+        return new RedirectResponse($this->urlGenerator->generate('rf__home'));
         // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 

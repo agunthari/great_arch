@@ -18,7 +18,7 @@ class BoController extends AbstractController
      */
     public function dashboard(): Response
     {
-        return $this->render('bo/dashboard.html.twig', [
+        return $this->render('@bo/dashboard.html.twig', [
         ]);
     }
 
@@ -29,7 +29,7 @@ class BoController extends AbstractController
     {
         $articles = $this->getDoctrine()->getRepository(Article::class)->findAll();
 
-        return $this->render('bo/article/list.html.twig', [
+        return $this->render('@bo/article/list.html.twig', [
         	'collection' => $articles
         ]);
     }
@@ -50,7 +50,7 @@ class BoController extends AbstractController
             return $this->redirectToRoute('bo__article__edit', ['article' => $article->getId()]);
         }
 
-        return $this->render('bo/article/edit.html.twig', [
+        return $this->render('@bo/article/edit.html.twig', [
             'item' => $article,
             'form' => $form->createView()
         ]);
@@ -69,7 +69,7 @@ class BoController extends AbstractController
             $this->getDoctrine()->getManager()->flush();
         }
 
-        return $this->render('bo/article/edit.html.twig', [
+        return $this->render('@bo/article/edit.html.twig', [
         	'item' => $article,
             'form' => $form->createView()
         ]);
@@ -80,7 +80,7 @@ class BoController extends AbstractController
      */
     public function article_delete(Article $article): Response
     {
-        return $this->render('bo/article/edit.html.twig', [
+        return $this->render('@bo/article/edit.html.twig', [
         	'item' => $article
         ]);
     }

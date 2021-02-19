@@ -1,4 +1,4 @@
-{# /templates/bo/base.html.twig #}
+{# @bo/base.html.twig #}
 
 <!DOCTYPE html>
 <html>
@@ -15,10 +15,10 @@
 	    	nav .nav-title {
 			    font-size: 25px;
 			    padding: 5px 60px;
-				}
-				.rf-green{
-					background-color:#006e49;
-				}
+			}
+			.rf-green{
+				background-color:#006e49;
+			}
 	    </style>
 	{% endblock %}
 
@@ -29,7 +29,7 @@
 	    	document.addEventListener('DOMContentLoaded', function() {
 			    var elems = document.querySelectorAll('.sidenav');
 			    var instances = M.Sidenav.init(elems, {});
-			  });
+			});
 	    </script>
 	{% endblock %}
 
@@ -37,7 +37,7 @@
 <body>
 	{% block nav_content %}
 		<nav class="{{ page_title is defined ? 'nav-extended' : '' }} rf-green">
-			{{ include('bo/nav.html.twig') }}
+			{{ include('@bo/nav.html.twig') }}
 			{% if page_title is defined %}
 				<div class="nav-content">
 			    <span class="nav-title">{{ page_title }}</span>
@@ -51,7 +51,7 @@
 		</nav>
 	{% endblock %}
 
-	{{ include('bo/sidenav.html.twig') }}
+	{{ include('@bo/sidenav.html.twig') }}
 
 	{% block body %}{% endblock %}
 </body>

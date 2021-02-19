@@ -1,9 +1,9 @@
-{% extends 'base.html.twig' %}
+{% extends '@app/base.html.twig' %}
 
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
     <section class="container">
-        {{ include('security/_form_login.html.twig') }}
+        {{ include('@app/security/_form_login.html.twig') }}
     </section>
 {% endblock %}

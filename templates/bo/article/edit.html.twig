@@ -1,6 +1,8 @@
-{# /templates/bo/article/edit.html.twig #}
+{# @bo/article/edit.html.twig #}
 
-{% extends 'bo/base.html.twig' %}
+{% extends '@bo/base.html.twig' %}
+
+{% form_theme form '@bo/form/form_templates.html.twig' %}
 
 {% block title %}{{ item is not null and item.id is not null ? 'Edition Article' : 'Creation Article' }} | {{ parent() }}{% endblock %}
 
@@ -10,7 +12,6 @@
 {% endblock %}
 
 {% block body %}
-		
 	<div class="container">
 		{% if item is not defined or item is null %}
 			<p>Desole, l'article n'existe pas ou plus</p>

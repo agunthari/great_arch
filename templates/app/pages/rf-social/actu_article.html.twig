@@ -1,17 +1,19 @@
-{# /templates/pages/rf-social/actu.html.twig #}
+{# @app/pages/rf-social/actu.html.twig #}
 
-{% extends 'base.html.twig' %}
+{% extends '@app/base.html.twig' %}
 
 
 {% block body %}
-
-		
-
-
+<section class="row container">
+    <article>
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.teaser }}</p>
+    </article>
+</section>
 		
 {% endblock %}
 
-{% block title %}Actualités | RF Social | Revue Fiduciaire{% endblock %}
+{% block title %}{{ article.title }} | Actualités | RF Social | Revue Fiduciaire{% endblock %}
 
 {% block metas %}
 	{% set meta = {

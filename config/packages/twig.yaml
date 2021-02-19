@@ -1,8 +1,5 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
-    form_themes:
-        - 'form/choice_widget_collapsed.html.twig'
-        - 'form/textarea_widget.html.twig'
-        - 'form/form_errors.html.twig'
-        - 'form/form_row.html.twig'
-        - 'form/form_label.html.twig'
+    paths:
+        'templates/bo': 'bo'
+        'templates/app': 'app'

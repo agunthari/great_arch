@@ -1,6 +1,0 @@
-{# /templates/form/textarea_widget.html.twig #}
-
-{% block textarea_widget %}
-    {% set attr = attr|merge({class: (attr.class|default('') ~ ' materialize-textarea')|trim}) %}
-    <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
-{% endblock textarea_widget %}

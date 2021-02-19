@@ -1,4 +1,4 @@
-{# /templates/base.html.twig #}
+{# @app/base.html.twig #}
 
 <!DOCTYPE html>
 <html>
@@ -111,9 +111,9 @@
           </div>
         {% endif %}
 
-        {{ include('menu/base_menu.html.twig') }}
+        {{ include('@app/menu/base_menu.html.twig') }}
 
-        {{ include('blocs/bloc_rs.html.twig') }}
+        {{ include('@app/blocs/bloc_rs.html.twig') }}
 
         {% block body %}{% endblock %}
     </body>

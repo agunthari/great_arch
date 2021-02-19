@@ -18,7 +18,7 @@ class RfSocialController extends AbstractController
     {
         $articles = $this->getDoctrine()->getRepository(Article::class)->findAll();
     	
-        return $this->render('pages/rf-social/home.html.twig', [
+        return $this->render('@app/pages/rf-social/home.html.twig', [
             'actu_list' => $articles
         ]);
     }
@@ -29,7 +29,7 @@ class RfSocialController extends AbstractController
      */
     public function actu(): Response
     {
-    	return $this->render('pages/rf-social/actu.html.twig', [
+    	return $this->render('@app/pages/rf-social/actu.html.twig', [
         ]);
     }
 
@@ -38,7 +38,7 @@ class RfSocialController extends AbstractController
      */
     public function actu_article( Article $article): Response
     {
-        return $this->render('pages/rf-social/actu_article.html.twig', [
+        return $this->render('@app/pages/rf-social/actu_article.html.twig', [
             'article' => $article
         ]);
     }

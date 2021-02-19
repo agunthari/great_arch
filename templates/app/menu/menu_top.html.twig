@@ -1,4 +1,4 @@
-{# /templates/menu/menu_top.html.twig #}
+{# @app/menu/menu_top.html.twig #}
 
 <div class="navbar navbar-default navbar-relative-top">
 	<div class="container text-left " >
@@ -9,9 +9,9 @@
 	</div>
 	<div class="header-right">
 		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-			{{ include('menu/menu_connected.html.twig') }}
+			{{ include('@app/menu/menu_connected.html.twig') }}
 		{% else %}
-			{{ include('security/_form_login_nav.html.twig') }}
+			{{ include('@app/security/_form_login_nav.html.twig') }}
 	
 			<span class="lineV"> | </span>
 			<a href="https://boutique.grouperf.com/produit/rf-social?code_campagne=0000PT30SW00001&utm_source=btn-site-presse&utm_medium=btn-header&utm_campaign=site-presse-RF-Social" target="_blank">

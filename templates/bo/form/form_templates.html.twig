@@ -1,0 +1,105 @@
+{# @bo/form/form_templates.html.twig #}
+
+{% block textarea_widget %}
+    {% set attr = attr|merge({class: (attr.class|default('') ~ ' materialize-textarea')|trim}) %}
+    <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
+{% endblock textarea_widget %}
+
+{% block choice_widget_collapsed %}
+  {% set attr = attr|merge({class: (attr.class|default('') ~ ' browser-default')|trim}) %}
+
+  {% if errors|length > 0 -%}
+      {% set attr = attr|merge({class: (attr.class|default('') ~ ' error')|trim}) %}
+  {% endif %}
+
+  {% if multiple -%}
+      {% set attr = attr|merge({style: (attr.style|default('') ~ ' height: auto; background-image: none;')|trim}) %}
+  {% endif %}
+
+  {% if required and placeholder is none and not placeholder_in_choices and not multiple -%}
+      {% set required = false %}
+  {%- endif -%}
+
+  <select {{ block('widget_attributes') }}{% if multiple %} multiple="multiple" data-customforms="disabled"{% endif %}>
+      {% if placeholder is not none -%}
+          <option value=""{% if required and value is empty %} selected="selected"{% endif %}>{{ translation_domain is same as(false) ? placeholder : placeholder|trans({}, translation_domain) }}</option>
+      {%- endif %}
+      {%- if preferred_choices|length > 0 -%}
+          {% set options = preferred_choices %}
+          {% set render_preferred_choices = true %}
+          {{- block('choice_widget_options') -}}
+          {% if choices|length > 0 and separator is not none -%}
+              <option disabled="disabled">{{ separator }}</option>
+          {%- endif %}
+      {%- endif -%}
+      {% set options = choices -%}
+      {%- set render_preferred_choices = false -%}
+      {{- block('choice_widget_options') -}}
+  </select>
+{% endblock %}
+
+{%- block form_errors -%}
+    {%- if errors|length > 0 -%}
+        {%- for error in errors -%}
+			<span class="helper-text red-text" data-error="wrong" >{{ error.message|trans }}</span>
+        {%- endfor -%}
+    {%- endif -%}
+{%- endblock form_errors -%}
+
+{%- block form_label -%}
+    {% if form.vars.choices is defined %}
+        {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' active')|trim}) %}
+    {% endif %}
+    {% if label is not same as(false) -%}
+        {% if not compound -%}
+            {% set label_attr = label_attr|merge({'for': id}) %}
+        {%- endif -%}
+        {% if required -%}
+            {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' required')|trim}) %}
+        {%- endif -%}
+        {% if label is empty -%}
+            {%- if label_format is not empty -%}
+                {% set label = label_format|replace({
+                    '%name%': name,
+                    '%id%': id,
+                }) %}
+            {%- else -%}
+                {% set label = name|humanize %}
+            {%- endif -%}
+        {%- endif -%}
+        <{{ element|default('label') }}{% if label_attr %}{% with { attr: label_attr } %}{{ block('attributes') }}{% endwith %}{% endif %}>
+            {%- if translation_domain is same as(false) -%}
+                {%- if label_html is same as(false) -%}
+                    {{- label -}}
+                {%- else -%}
+                    {{- label|raw -}}
+                {%- endif -%}
+            {%- else -%}
+                {%- if label_html is same as(false) -%}
+                    {{- label|trans(label_translation_parameters, translation_domain) -}}
+                {%- else -%}
+                    {{- label|trans(label_translation_parameters, translation_domain)|raw -}}
+                {%- endif -%}
+            {%- endif -%}
+        </{{ element|default('label') }}>
+    {%- endif -%}
+{%- endblock form_label -%}
+
+{%- block form_row -%}
+    {%- set widget_attr = {} -%}
+    {%- if help is not empty -%}
+        {%- set widget_attr = {attr: {'aria-describedby': id ~"_help"}} -%}
+    {%- endif -%}
+
+    {%- set row_attr = row_attr|merge({class: (row_attr.class|default('') ~ ' input-field')|trim}) -%}
+    {%- if errors is not empty -%}
+        {%- set row_attr = row_attr|merge({class: (row_attr.class|default('') ~ ' errors')|trim}) -%}
+    {%- endif -%}
+
+    <div{% with {attr: row_attr} %}{{ block('attributes') }}{% endwith %}>
+        {{- form_label(form) -}}
+        {{- form_widget(form, widget_attr) -}}
+        {{- form_errors(form) -}}
+        {{- form_help(form) -}}
+    </div>
+{%- endblock form_row -%}

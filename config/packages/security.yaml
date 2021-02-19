@@ -23,7 +23,7 @@ security:
                     - App\Security\LoginFormAuthenticator
             logout:
                 path: app_logout
-                target: rf_social__home
+                target: rf__home
                 # where to redirect after logout
                 # target: app_any_route
 
